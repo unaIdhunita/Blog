@@ -10,25 +10,15 @@
             <h1>Django Blog</h1>
             <hr>
       </header>
-      <main>
-            <p><small><strong>Publicado:</strong> 23 de junio de 2026 - 12:14</small></p>
-            <h2>Mi primer post</h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <details>
-                  <summary><i>Leer más</i></summary>
-                  <p>Contenido completo del primer post...</p>
-            </details>
-            <hr>
-
-            <p><small><strong>Publicado:</strong> 23 de junio de 2026 - 12:14</small></p>
-            <h2>Mi segundo post</h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <details>
-                  <summary><i>Leer más</i></summary>
-                  <p>Contenido completo del segundo post...</p>
-            </details>
-            <hr>
-            
+<main>
+            {% for post in posts %}
+                  <p><small><strong>Publicado:</strong> {{ post.published_date }}</small></p>
+                  <h2>{{ post.title }}</h2>
+                  <p>{{ post.text|linebreaksbr }}</p>
+                  <hr>
+            {% empty %}
+                  <p>Todavía no hay posts publicados.</p>
+            {% endfor %}
       </main>
       <footer>
             <p><small>2026 Django Blog</small></p>
