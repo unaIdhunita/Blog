@@ -1,0 +1,32 @@
+body {
+      font-family:Georgia,serif;
+      background:#fdf6e3;
+      color:#657b83;
+      max-width:720px;
+      margin:0 auto;
+      padding:2rem;
+}
+
+.blog-header {
+      background:#073642;
+      color:#839496;
+      padding:2rem;
+      margin-bottom:2rem;
+      border-radius:8px;
+}
+
+.blog-header h1 {
+      color:#268bd2;
+}
+
+article {
+      background:#eee8d5;
+      border-left:4px solid #859900;
+      padding:1.5rem;
+      margin-bottom:1rem;
+      border-radius:0 8px 8px 0;
+}
+
+article h2 {
+      color:#b58900;
+}
